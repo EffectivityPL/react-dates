@@ -879,7 +879,7 @@ class DayPicker extends React.PureComponent {
   adjustDayPickerHeight(newMonthHeight) {
     const monthHeight = newMonthHeight + MONTH_PADDING;
     if (monthHeight !== this.calendarMonthGridHeight) {
-      this.transitionContainer.style.height = `${monthHeight}px`;
+      this.transitionContainer.style.height = `${monthHeight+60}px`;
       if (!this.calendarMonthGridHeight) {
         this.setCalendarMonthGridHeightTimeout = setTimeout(() => {
           this.setState({ hasSetHeight: true });
